@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cornelia Manda | Portfolio</title>
+    <title>Cornelia Manda | Portfolio | Portfolio Page</title>
+   <!-- Made by: Cornelia Manda, December 10th, 2025 for GBDA228--> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+  <!-- again, for my homepage claude to give me the href for the google font's playfair display & roboto, as it wasn't working when I linked it not sure why, so i used what claude gave me here as well--> 
 
+  
     <style>
-        /* --- Global Reset & Typography --- */
+        /* the global reset & typography choices */
         * {
             box-sizing: border-box;
         }
@@ -27,7 +30,7 @@
             font-family: "Playfair Display", serif;
         }
 
-        /* --- Layout Container (1200px Centered) --- */
+        /* main layout container, 1200px & centered */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -36,7 +39,7 @@
             min-height: 100vh;
         }
 
-        /* --- Navigation --- */
+        /* navigation system*/
         header {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -44,7 +47,7 @@
             background-color: #DDBDBE;
             padding: 40px 60px;
         }
-
+        /* again logo title is misleading but it's my name in the corner, i want it to be a logo in the future! */
         .logo {
             font-family: "Playfair Display", serif;
             font-size: 1.5em;
@@ -79,7 +82,7 @@
             color: white; 
         }
 
-        /* --- Page Title Styling --- */
+        /* page title style */
         .page-title {
             text-align: center;
             color: #816B6E;
@@ -90,13 +93,14 @@
             font-weight: 700;
         }
 
-        /* --- Resume Button Styling --- */
+        /* resume button style */
         .button-container {
             text-align: center; 
-            margin-top: 40px; /* Added more space above button so it doesn't touch the grid */
+            margin-top: 40px;
             margin-bottom: 20px;
         }
 
+        /* call to action buttonn*/
         .cta-button {
             display: inline-block;
             padding: 15px 50px; 
@@ -122,7 +126,7 @@
             cursor: pointer;
         }
 
-        /* --- Portfolio Grid Layout --- */
+        /* portfolio pieces grid layout */
         #portfolio-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -150,9 +154,11 @@
             object-fit: cover;
             display: block;
             transition: transform 0.5s ease;
+           /* again a note from the homepage - i wanted more feedback for the user, so i did my research on how i could and i asked claude how i could do it and asked for an explanation*/
+
         }
 
-        /* --- Overlay & Text Styling --- */
+        /* overlay label and text style */
         .overlay-label {
             display: flex; 
             align-items: center; 
@@ -163,7 +169,7 @@
             left: 0;
             
             width: 100%;
-            background-color: rgba(101, 92, 91, 0.85);
+            background-color: #E0E2DF; 
             padding: 50px 0; 
             z-index: 10;
         }
@@ -198,7 +204,7 @@
             transform: rotate(90deg) translateX(-50%); 
         }
 
-        /* --- Interactivity --- */
+        /*  more interactivity */
         .grid-item:hover img {
             transform: scale(1.05);
         }
@@ -210,7 +216,7 @@
             transform-origin: center;
         }
 
-        /* --- Footer --- */
+        /* footer */
         footer {
             text-align: center;
             padding: 40px;
