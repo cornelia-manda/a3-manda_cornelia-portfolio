@@ -4,12 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cornelia Manda | Portfolio | Portfolio Page</title>
-   <!-- Made by: Cornelia Manda, December 10th, 2025 for GBDA228--> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
-  <!-- again, for my homepage claude to give me the href for the google font's playfair display & roboto, as it wasn't working when I linked it not sure why, so i used what claude gave me here as well--> 
-
   
     <style>
         /* the global reset & typography choices */
@@ -26,7 +23,7 @@
             background-color: #E0E2DF;
         }
 
-        h1, h2, h3, a {
+        h1, h2, h3, a, th {
             font-family: "Playfair Display", serif;
         }
 
@@ -45,9 +42,9 @@
             grid-template-columns: 1fr 1fr;
             align-items: center;
             background-color: #DDBDBE;
-            padding: 40px 60px;
+            padding: 15px 60px;
         }
-        /* again logo title is misleading but it's my name in the corner, i want it to be a logo in the future! */
+        
         .logo {
             font-family: "Playfair Display", serif;
             font-size: 1.5em;
@@ -96,8 +93,8 @@
         /* resume button style */
         .button-container {
             text-align: center; 
-            margin-top: 40px;
-            margin-bottom: 20px;
+            margin-top: 25px;
+            margin-bottom: 60px;
         }
 
         /* call to action buttonn*/
@@ -154,8 +151,6 @@
             object-fit: cover;
             display: block;
             transition: transform 0.5s ease;
-           /* again a note from the homepage - i wanted more feedback for the user, so i did my research on how i could and i asked claude how i could do it and asked for an explanation*/
-
         }
 
         /* overlay label and text style */
@@ -169,7 +164,10 @@
             left: 0;
             
             width: 100%;
-            background-color: #E0E2DF; 
+            
+            /* CHANGE: Switched from solid #E0E2DF to translucent rgba */
+            background-color: rgba(101, 92, 91, 0.85); 
+            
             padding: 50px 0; 
             z-index: 10;
         }
@@ -204,7 +202,7 @@
             transform: rotate(90deg) translateX(-50%); 
         }
 
-        /*  more interactivity */
+        /* more interactivity */
         .grid-item:hover img {
             transform: scale(1.05);
         }
@@ -216,13 +214,64 @@
             transform-origin: center;
         }
 
-        /* footer */
+        /* --- Footer Styles (IMPORTED) --- */
         footer {
             text-align: center;
             padding: 40px;
-            margin-top: 20px;
+            margin-top: 40px;
             color: #655C5B;
             font-size: 0.9em;
+            border-top: 1px solid #DDBDBE; 
+        }
+
+        /* Footer Table Layout */
+        .footer-table-wrapper {
+            display: flex; 
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .footer-table {
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        .footer-table th {
+            color: #816B6E;
+            font-size: 1.1em;
+            padding: 5px 10px 5px 0;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+
+        .footer-table th:not(:first-child) {
+            padding-left: 30px; 
+        }
+
+        .footer-table td {
+            padding: 5px 0;
+            font-family: "Roboto", sans-serif;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+
+        .footer-table a {
+            color: #655C5B;
+            text-decoration: none;
+            font-weight: 700;
+            border-bottom: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .footer-table a:hover {
+            color: #816B6E;
+            border-bottom: 1px solid #816B6E;
+        }
+
+        .copyright {
+            margin-top: 20px;
+            opacity: 0.8;
+            font-size: 0.8em;
         }
 
     </style>
@@ -293,7 +342,22 @@
         </div>
 
         <footer>
-            <p>&copy; 2025 Cornelia Manda. All Rights Reserved.</p>
+            <div class="footer-table-wrapper">
+                <table class="footer-table">
+                    <tr>
+                        <th>Email:</th>
+                        <td><a href="mailto:cmanda@uwaterloo.ca">cmanda@uwaterloo.ca</a></td>
+                        
+                        <th>School:</th>
+                        <td><a href="https://uwaterloo.ca/global-business-digital-arts/" target="_blank">University of Waterloo</a></td>
+                        
+                        <th>Location:</th>
+                        <td>Kitchener-Waterloo, Ontario</td>
+                    </tr>
+                </table>
+            </div>
+
+            <p class="copyright">&copy; 2025 Cornelia Manda. All Rights Reserved.</p>
         </footer>
 
     </div>
